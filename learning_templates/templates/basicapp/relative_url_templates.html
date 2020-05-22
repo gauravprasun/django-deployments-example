@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>WELCOME TO RELATIVE URL TEMPLATES</h1>
+    <!-- relative url -->
+    <!-- Syntax: -->
+    <!-- 'app_name:page' -->
+    <!-- Note: there should be no space or any other character in 'basicapp:other', otherwise it'll raise an error -->
+    <a href="{% url 'basicapp:other'%}">The other page</a>
+    <!-- adding the admin page as an anchor tag -->
+    <!-- Note: 'admin' is also one of the installed apps just like basicapp -->
+    <!-- Doubt: why do we write admin:index here? -->
+    <a href="{% url 'admin:index'%}">Link to admin</a>
+    <!-- link to index: since index was not embedded in any app, we don't write app_name -->
+    <a href="{% url 'index' %}">Link to index</a>
+  </body>
+</html>

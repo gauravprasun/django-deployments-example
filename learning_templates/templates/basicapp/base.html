@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!-- any code always goes below it, no matter what -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <!-- CSS only -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+          <div class="nav navbar-nav">
+            <a  class="navbar-brand" href="{% url 'index' %}">BRAND</a>
+            <a  class="nav-item nav-link" href="{% url 'admin:index' %}">Admin</a>
+            <a  class="nav-item nav-link" href="{% url 'basicapp:other' %}">Other</a>
+          </div>
+
+    </nav>
+
+    <div class="container">
+
+      {% block body_block %}
+      <!-- Anything outside of this will be inherited if you extend -->
+      {% endblock %}
+
+    </div>
+
+  </body>
+</html>

@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+{% extends "basicapp/base.html" %}
+<!-- The part within the body_block is unique to this file -->
+  {% block body_block %}
+    <h1>WELCOME TO INDEX</h1>
+    <h2>This is index.html page showing!</h2>
+    <!-- injecting the dictionary values using template tagging -->
+    <!-- using built-in filters -->
+    <h1>{{ text|cut:'world' }}</h1>
+    <h1>{{ number|add:"99" }}</h1>
+  {% endblock %}
